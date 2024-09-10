@@ -1,6 +1,5 @@
 // 2. Create the player object. Give it two keys, name and chips, and set their values
 let player = {
-    name: "Per",
     chips: 200
 }
 let cards = []
@@ -16,6 +15,13 @@ let playerEl = document.getElementById("player-el")
 
 // 4. Render the player's name and chips in playerEl
 playerEl.textContent = player.name + ": $" + player.chips
+
+
+function getPlayerName() {
+    let getName = document.getElementById("player-in")
+    playerName = getName
+    player.name = playerName
+}
 
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
